@@ -50,8 +50,9 @@ No necesitás hacer nada especial — el PR se actualiza solo.
    - Qué intentaste.
    - Qué error estás viendo.
 
-4. **Mencionar al docente** — si un docente te dio su usuario de GitHub,
-   podés arrobarlo en el comentario para que reciba una notificación:
+4. **Mencionar al docente** — Para mencionar a un docente podes arrobarlo
+   con el nombre de usuario o el correo electrónico, en el comentario para
+   que reciba una notificación:
 
        @nombredeusuario ayuda con el ejercicio de palindromo
 
@@ -84,8 +85,8 @@ No necesitás hacer nada especial — el PR se actualiza solo.
 07-ordenamientos-lineales/     # capítulo 4-7
 ```
 
-Cada capítulo tiene `ejercicios/` (esqueletos con tests) y los primeros dos
-también tienen `ejemplos/` (código funcional).
+Cada capítulo tiene `ejercicios/` (esqueletos con tests) y algunos pueden 
+tener también `ejemplos/` (código funcional).
 
 ## Comandos útiles
 
