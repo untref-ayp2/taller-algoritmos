@@ -17,19 +17,4 @@
    recorrer la lista sin exponer su estructura interna.
    → `03-iterador-listas/`
 
-4. **Robot Adapter.** Un robot mide distancias en metros y centímetros,
-   pero el sistema del cliente espera recibir la distancia en pulgadas.
-   Implementar un *Adapter* que convierta la interfaz del robot a la
-   interfaz esperada por el cliente (1 pulgada = 2.54 cm).
-   → `04-robot-adapter/`
-
-5. **Tren de Figuras.** Usando el patrón *Composite*, modelar figuras
-   geométricas (rectángulo, círculo, triángulo) que puedan agruparse
-   en un `Grupo` para calcular el área total. El grupo debe poder
-   contener tanto figuras simples como otros grupos.
-   → `05-tren-figuras/`
-
-6. **Iterador Clásico.** Implementar el patrón *Iterator* con el estilo
-   clásico GoF: un iterador con métodos `Primero()`, `Siguiente()`,
-   `HaySiguiente()` y `Actual()` para recorrer una lista enlazada.
-   → `06-iterador-clasico/`
+Los ejemplos de referencia están en el directorio `../ejemplos/`.
