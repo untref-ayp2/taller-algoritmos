@@ -1,4 +1,4 @@
-.PHONY: build test fmt clean
+.PHONY: build test test-v test-short fmt lint clean
 
 build:
 	go build ./...
@@ -6,11 +6,17 @@ build:
 test:
 	go test ./...
 
+test-v:
+	go test -v ./...
+
+test-short:
+	go test -short ./...
+
 fmt:
 	go fmt ./...
 
-test-ejercicios:
-	go test ./... 2>&1 | grep -E "^(ok|FAIL|---)" || true
+lint:
+	golangci-lint run ./...
 
 clean:
 	rm -f *.test *.out

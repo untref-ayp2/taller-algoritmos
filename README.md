@@ -113,10 +113,10 @@ Correr todos los tests:
 make test
 ```
 
-Correr solo los tests de ejercicios (oculta ruido de ejemplos):
+Correr con detalle:
 
 ```bash
-make test-ejercicios
+make test-v
 ```
 
 Formatear código:
@@ -131,6 +131,8 @@ Ejecutar un ejemplo:
 go run ./01-recursividad/ejemplos/factorial
 go run ./02-patrones-de-diseno/ejemplos/adapter
 ```
+
+Para más información sobre cómo trabajar, ver [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Requisitos
 
