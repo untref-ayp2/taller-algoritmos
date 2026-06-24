@@ -6,11 +6,20 @@
    dinámica (bottom-up o top-down con memoización).
    → `01-escaleras/`
 
-2. **Mochila (Knapsack).** Dado un conjunto de objetos con peso y valor,
-   y una mochila con capacidad máxima `W`, seleccionar los objetos que
-   maximicen el valor total sin superar la capacidad. Implementar la
-   solución con programación dinámica (0/1 knapsack).
-   → `02-mochila/`
+2. **Cambio de monedas.** Dado un monto y un conjunto de denominaciones,
+   encontrar la cantidad mínima de monedas necesarias para formar el
+   monto. Implementar con **tabulación** (`CambioTab`) y con
+   **memoización** (`CambioMemo`).
+
+   A diferencia del algoritmo ávido visto en el capítulo de algoritmos
+   ávidos, la programación dinámica **no requiere que las denominaciones
+   cumplan condiciones especiales** (como ser submúltiplos). PD siempre
+   encuentra la solución óptima para cualquier conjunto de denominaciones.
+
+   Por ejemplo, para monto=6 y denominaciones {1, 3, 4}:
+   - Ávido: 4 + 1 + 1 = 3 monedas
+   - PD (óptimo): 3 + 3 = 2 monedas
+   → `02-cambio/`
 
 3. **Subsecuencia Común Más Larga (LCS).** Dadas dos cadenas, encontrar
    la longitud de la subsecuencia común más larga. Implementar con PD
