@@ -80,9 +80,12 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 
 | Directorio | Descripción |
 |---|---|
-| `ejercicios/01-mergesort-listas/` | Merge Sort sobre lista simplemente enlazada |
-| `ejercicios/02-quicksort-mediana/` | QuickSort con pivote mediana de tres |
-| `ejercicios/03-inversiones/` | Contar inversiones con variante de Merge Sort |
+| `ejercicios/01-mergesort/` | MergeSort genérico con función de comparación |
+| `ejercicios/02-quicksort/` | QuickSort genérico con función de comparación |
+| `ejercicios/03-heapsort/` | HeapSort genérico con función de comparación |
+| `ejercicios/04-ordenar-estructuras/` | Ordenar struct `Persona` por múltiples criterios |
+| `ejercicios/05-quickselect/` | k-ésimo elemento más pequeño (QuickSelect) |
+| `ejercicios/06-fusionar-ordenados/` | Fusionar dos slices ordenados |
 
 ### 07 — Ordenamientos Lineales (capítulo 4-7)
 

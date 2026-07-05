@@ -1,17 +1,113 @@
 # Ejercicios: Ordenamientos Recursivos
 
-1. **Merge Sort en Listas.** Implementar el algoritmo Merge Sort para
-   ordenar una lista simplemente enlazada. No usar arreglos auxiliares;
-   trabajar solo con manipulación de punteros/nodos.
-   → `01-mergesort-listas/`
+---
 
-2. **QuickSort con Mediana de Tres.** Implementar QuickSort usando la
-   estrategia de "mediana de tres" para elegir el pivote, en lugar de
-   tomar siempre el primer o último elemento. Comparar experimentalmente
-   la cantidad de comparaciones con la versión estándar.
-   → `02-quicksort-mediana/`
+## 1. Mergesort Genérico
 
-3. **Inversiones.** Dado un arreglo de enteros, contar la cantidad de
-   inversiones (pares `(i, j)` con `i < j` y `arr[i] > arr[j]`)
-   usando una variante de Merge Sort.
-   → `03-inversiones/`
+Implementar el algoritmo **MergeSort** sobre un slice `[]T` usando una función de comparación `less`.
+
+La función `MergeSort[T any](s []T, less func(a, b T) bool)` ordena el slice recibido
+(dividiendo recursivamente, ordenando cada mitad y fusionando) sin crear uno nuevo.
+
+**Requisitos:**
+- Usar un slice auxiliar para la fusión (merge)
+- Ser estable (elementos iguales mantienen orden relativo)
+- Funcionar con cualquier tipo `T`
+
+**Preguntas:**
+- ¿Por qué MergeSort necesita en O(n) memoria extra?
+- ¿Qué complejidad temporal tiene en el peor caso?
+
+→ `01-mergesort/`
+
+---
+
+## 2. Quicksort Genérico
+
+Implementar el algoritmo **QuickSort** sobre un slice `[]T` usando una función de comparación `less`.
+
+La función `QuickSort[T any](s []T, less func(a, b T) bool)` ordena el slice recibido
+seleccionando un pivote (último elemento), particionando y ordenando recursivamente cada subslice, sin crear uno nuevo.
+
+**Requisitos:**
+- Usar el último elemento como pivote
+- Particionar in-place
+- Funcionar con cualquier tipo `T`
+
+**Preguntas:**
+- ¿Qué ocurre si el slice ya está ordenado? ¿Y si está en orden inverso?
+- ¿Cómo se podría elegir un mejor pivote?
+
+→ `02-quicksort/`
+
+---
+
+## 3. Heapsort Genérico
+
+Implementar el algoritmo **HeapSort** sobre un slice `[]T` usando una función de comparación `less`.
+
+La función `HeapSort[T any](s []T, less func(a, b T) bool)` ordena el slice recibido
+(construyendo un heap y extrayendo repetidamente la raíz) sin crear uno nuevo.
+
+**Funciones auxiliares:**
+- `downHeap[T any](s []T, n, i int, less func(a, b T) bool)` — hunde el nodo `i` dentro de un heap de tamaño `n`
+
+**Preguntas:**
+- ¿HeapSort es estable? Justificar.
+- ¿Qué complejidad temporal tiene?
+
+→ `03-heapsort/`
+
+---
+
+## 4. Ordenar Estructuras
+
+Ordenar un slice de `Persona{nombre string, edad int}` usando diferentes criterios.
+
+Elegir **uno** de los algoritmos implementados en los ejercicios 1-3 (MergeSort, QuickSort o
+HeapSort) y usarlo para implementar tres funciones:
+- `OrdenarPorEdadAsc` — de menor a mayor edad
+- `OrdenarPorNombreDesc` — alfabéticamente en orden descendente
+- `OrdenarPorEdadAscNombreDesc` — por edad ascendente y, ante empate, por nombre descendente
+
+Cada función debe pasar la función `less` adecuada al algoritmo elegido.
+
+**Preguntas:**
+- ¿Cómo harías para componer comparadores genéricamente?
+- ¿Qué ventaja tiene separar el criterio de orden del algoritmo?
+- ¿Cambia la elección del algoritmo el resultado final?
+
+→ `04-ordenar-estructuras/`
+
+---
+
+## 5. k-ésimo Elemento Más Pequeño (QuickSelect)
+
+Implementar **QuickSelect** para encontrar el k-ésimo elemento más pequeño sin ordenar todo el slice.
+
+La función `QuickSelect[T any](s []T, k int, less func(a, b T) bool) T` devuelve el elemento
+en la posición `k` (0-indexed) si el slice estuviera ordenado.
+
+**Nota:** La función lee el slice pero no lo modifica permanentemente (usa una copia o particiona
+sobre una copia local).
+
+**Preguntas:**
+- ¿Qué complejidad esperada tiene QuickSelect? ¿Y en el peor caso?
+- ¿Cómo encontrarías la mediana con QuickSelect?
+
+→ `05-quickselect/`
+
+---
+
+## 6. Fusionar Dos Slices Ordenados
+
+Implementar una función que reciba dos slices ya ordenados y devuelva uno nuevo con todos los elementos ordenados (la fase de fusión de MergeSort).
+
+La función `MergeSorted[T any](a, b []T, less func(a, b T) bool) []T` recorre ambos slices
+simultáneamente insertando el menor elemento en cada paso.
+
+**Preguntas:**
+- ¿Qué complejidad temporal y espacial tiene?
+- ¿Es estable?
+
+→ `06-fusionar-ordenados/`
