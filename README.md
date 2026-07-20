@@ -71,7 +71,7 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 | Directorio | Descripción |
 |---|---|
 | `ejercicios/01-escaleras/` | Contar formas de subir n escalones saltando 1 o 2 |
-| `ejercicios/02-mochila/` | 0/1 Knapsack: maximizar valor sin superar capacidad W |
+| `ejercicios/02-cambio/` | Cambio de monedas con PD: cantidad mínima de monedas (tabulación y memoización) |
 | `ejercicios/03-subsecuencia/` | Longitud de la subsecuencia común más larga (LCS) |
 
 ### 06 — Ordenamientos Recursivos (capítulo 4-6)
@@ -96,46 +96,35 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 | `ejercicios/01-counting-sort/` | Counting Sort para enteros no negativos |
 | `ejercicios/02-radix-sort/` | Radix Sort usando Counting Sort como subrutina estable |
 | `ejercicios/03-bucket-sort/` | Bucket Sort para reales en [0, 1) |
+| `ejercicios/04-counting-sort-estable/` | Versión estable de Counting Sort con suma prefijo |
+| `ejercicios/05-radix-sort-strings/` | Radix Sort para cadenas alfanuméricas de longitud fija |
+| `ejercicios/06-bucket-sort-generalizado/` | Bucket Sort con k buckets configurables |
+| `ejercicios/07-aplicacion-estructuras/` | Ordenar personas por edad usando Counting Sort estable |
 
 ## Cómo usar
 
 ```bash
-git clone https://github.com/untref-ayp2/taller-algoritmos.git
-cd taller-algoritmos
-```
+# Ejecutar todos los tests
+make test
 
-Compilar todo:
+# Con detalle de cada caso
+make test-v
 
-```bash
+# Tests de un ejercicio específico
+go test -v ./01-recursividad/ejercicios/01-palindromo/...
+
+# Compilar todo
 make build
 ```
 
-Correr todos los tests:
-
-```bash
-make test
-```
-
-Correr con detalle:
-
-```bash
-make test-v
-```
-
-Formatear código:
-
-```bash
-make fmt
-```
-
-Ejecutar un ejemplo:
+Para ejecutar un ejemplo:
 
 ```bash
 go run ./01-recursividad/ejemplos/factorial
 go run ./02-patrones-de-diseno/ejemplos/adapter
 ```
 
-Para más información sobre cómo trabajar, ver [CONTRIBUTING.md](CONTRIBUTING.md).
+Para más información, ver [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Requisitos
 
