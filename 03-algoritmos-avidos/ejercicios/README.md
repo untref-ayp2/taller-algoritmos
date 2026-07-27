@@ -16,3 +16,19 @@
    cambio usando la menor cantidad de monedas posible (versión ávida,
    asumiendo denominaciones canónicas).
    → `03-maquina-expendedora/`
+
+4. **Mochila Fraccionaria.** Implementar el algoritmo ávido para la
+   mochila fraccionaria: ordenar items por valor/peso descendente y
+   tomar fracciones del último si es necesario para llenar la capacidad.
+   → `04-mochila-fraccionaria/`
+
+5. **Minimizar Tiempo de Espera.** Dado un conjunto de trabajos con
+   tiempos de procesamiento, determinar el orden que minimiza la suma
+   de tiempos de espera usando Shortest Job First (SJF).
+   → `05-minimizar-espera/`
+
+6. **Planificación de Tareas con Plazos.** Dados trabajos con deadline
+   y ganancia, maximizar la ganancia total seleccionando y ordenando
+   trabajos de forma ávida (ordenar por ganancia, asignar al slot más
+   tardío disponible).
+   → `06-planificar-tareas/`
