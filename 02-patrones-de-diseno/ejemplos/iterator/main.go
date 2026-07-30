@@ -4,67 +4,65 @@ import "fmt"
 
 // Nodo de la lista enlazada.
 type Nodo struct {
-	Valor     int
-	Siguiente *Nodo
+	valor int
+	sig   *Nodo
 }
 
-// ListaEnlazada es la colección.
-type ListaEnlazada struct {
-	Primero *Nodo
+// Lista es la colección.
+type Lista struct {
+	cabeza *Nodo
 }
 
-func (l *ListaEnlazada) InsertarAlInicio(valor int) {
-	if l.Primero == nil {
-		l.Primero = &Nodo{Valor: valor}
-	} else {
-		nuevoNodo := &Nodo{Valor: valor, Siguiente: l.Primero}
-		l.Primero = nuevoNodo
+func (l *Lista) AgregarAlFinal(valor int) {
+	nuevo := &Nodo{valor: valor}
+	if l.cabeza == nil {
+		l.cabeza = nuevo
+		return
 	}
+	actual := l.cabeza
+	for actual.sig != nil {
+		actual = actual.sig
+	}
+	actual.sig = nuevo
 }
 
-// Iterador define el comportamiento para recorrer la colección.
-type Iterador interface {
-	Primero()
-	Siguiente()
-	HaySiguiente() bool
-	Actual() int
+// Iterador permite recorrer la lista sin exponer su estructura.
+type Iterador struct {
+	actual  *Nodo
+	primera bool
 }
 
-// IteradorLista implementa Iterador para ListaEnlazada.
-type IteradorLista struct {
-	lista  *ListaEnlazada
-	actual *Nodo
+func (l *Lista) Iterador() *Iterador {
+	return &Iterador{actual: l.cabeza, primera: true}
 }
 
-func (l *ListaEnlazada) CrearIterador() Iterador {
-	return &IteradorLista{lista: l, actual: l.Primero}
+func (it *Iterador) Siguiente() bool {
+	if it.actual == nil {
+		return false
+	}
+	if !it.primera {
+		it.actual = it.actual.sig
+		if it.actual == nil {
+			return false
+		}
+	}
+	it.primera = false
+	return true
 }
 
-func (it *IteradorLista) Primero() {
-	it.actual = it.lista.Primero
-}
-
-func (it *IteradorLista) Siguiente() {
-	it.actual = it.actual.Siguiente
-}
-
-func (it *IteradorLista) HaySiguiente() bool {
-	return it.actual != nil
-}
-
-func (it *IteradorLista) Actual() int {
-	return it.actual.Valor
+func (it *Iterador) Valor() int {
+	return it.actual.valor
 }
 
 func main() {
-	lista := &ListaEnlazada{}
-	lista.InsertarAlInicio(3)
-	lista.InsertarAlInicio(2)
-	lista.InsertarAlInicio(1)
+	lista := &Lista{}
+	lista.AgregarAlFinal(1)
+	lista.AgregarAlFinal(2)
+	lista.AgregarAlFinal(3)
 
-	iterador := lista.CrearIterador()
-	for iterador.Primero(); iterador.HaySiguiente(); iterador.Siguiente() {
-		fmt.Println(iterador.Actual())
+	it := lista.Iterador()
+	for it.Siguiente() {
+		fmt.Println(it.Valor())
 	}
 	// Salida:
 	// 1

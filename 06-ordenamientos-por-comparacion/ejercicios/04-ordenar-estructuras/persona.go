@@ -3,9 +3,9 @@ package persona
 // Elegir uno de los algoritmos implementados en los ejercicios 1-3.
 // Descomentar la importación del elegido:
 //
-//	import "github.com/untref-ayp2/taller-algoritmos/06-ordenamientos-recursivos/ejercicios/01-mergesort"
-//	import "github.com/untref-ayp2/taller-algoritmos/06-ordenamientos-recursivos/ejercicios/02-quicksort"
-//	import "github.com/untref-ayp2/taller-algoritmos/06-ordenamientos-recursivos/ejercicios/03-heapsort"
+//	import "github.com/untref-ayp2/taller-algoritmos/06-ordenamientos-por-comparacion/ejercicios/01-mergesort"
+//	import "github.com/untref-ayp2/taller-algoritmos/06-ordenamientos-por-comparacion/ejercicios/02-quicksort"
+//	import "github.com/untref-ayp2/taller-algoritmos/06-ordenamientos-por-comparacion/ejercicios/03-heapsort"
 
 type Persona struct {
 	Nombre string

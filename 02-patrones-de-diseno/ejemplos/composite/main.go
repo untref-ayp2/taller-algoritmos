@@ -1,84 +1,57 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
-// Figura define la interfaz común.
-type Figura interface {
-	Area() float64
+// Componente define la operación común a archivos y carpetas.
+type Componente interface {
+	Tamanio() int64
 }
 
-// Rectangulo (Simple)
-type Rectangulo struct {
-	Base   float64
-	Altura float64
+// Archivo representa un elemento simple (hoja) del sistema.
+type Archivo struct {
+	nombre string
+	bytes  int64
 }
 
-func (r *Rectangulo) Area() float64 {
-	return r.Base * r.Altura
+func (a *Archivo) Tamanio() int64 {
+	return a.bytes
 }
 
-// Circulo (Simple)
-type Circulo struct {
-	Radio float64
+// Carpeta representa un elemento compuesto que contiene otros componentes.
+type Carpeta struct {
+	nombre      string
+	componentes []Componente
 }
 
-func (c *Circulo) Area() float64 {
-	return math.Pi * c.Radio * c.Radio
-}
-
-// Triangulo (Simple)
-type Triangulo struct {
-	Base   float64
-	Altura float64
-}
-
-func (t *Triangulo) Area() float64 {
-	return (t.Base * t.Altura) / 2
-}
-
-// Grupo (Compuesto)
-type Grupo struct {
-	figuras []Figura
-}
-
-func (g *Grupo) Agregar(f Figura) {
-	g.figuras = append(g.figuras, f)
-}
-
-func (g *Grupo) Area() float64 {
-	var areaTotal float64
-	for _, f := range g.figuras {
-		areaTotal += f.Area()
+func (c *Carpeta) Tamanio() int64 {
+	var total int64
+	for _, comp := range c.componentes {
+		total += comp.Tamanio()
 	}
-	return areaTotal
+	return total
+}
+
+func (c *Carpeta) Agregar(comp Componente) {
+	c.componentes = append(c.componentes, comp)
 }
 
 func main() {
-	locomotora := &Grupo{}
-	locomotora.Agregar(&Rectangulo{Base: 7, Altura: 3})
-	locomotora.Agregar(&Circulo{Radio: 1})
-	locomotora.Agregar(&Circulo{Radio: 1})
-	locomotora.Agregar(&Triangulo{Base: 2, Altura: 4})
-	locomotora.Agregar(&Rectangulo{Base: 2, Altura: 3})
+	readme := &Archivo{nombre: "README.md", bytes: 2048}
+	licencia := &Archivo{nombre: "LICENSE", bytes: 1024}
 
-	vagon1 := &Grupo{}
-	vagon1.Agregar(&Rectangulo{Base: 7, Altura: 3})
-	vagon1.Agregar(&Circulo{Radio: 1})
-	vagon1.Agregar(&Circulo{Radio: 1})
+	src := &Carpeta{nombre: "src"}
+	src.Agregar(&Archivo{nombre: "main.go", bytes: 4096})
+	src.Agregar(&Archivo{nombre: "utils.go", bytes: 1536})
 
-	vagon2 := &Grupo{}
-	vagon2.Agregar(&Rectangulo{Base: 7, Altura: 3})
-	vagon2.Agregar(&Circulo{Radio: 1})
-	vagon2.Agregar(&Circulo{Radio: 1})
+	docs := &Carpeta{nombre: "docs"}
+	docs.Agregar(&Archivo{nombre: "manual.pdf", bytes: 524288})
 
-	tren := &Grupo{}
-	tren.Agregar(locomotora)
-	tren.Agregar(vagon1)
-	tren.Agregar(vagon2)
+	proyecto := &Carpeta{nombre: "mi-proyecto"}
+	proyecto.Agregar(readme)
+	proyecto.Agregar(licencia)
+	proyecto.Agregar(src)
+	proyecto.Agregar(docs)
 
-	fmt.Println("El área del tren es:", tren.Area())
-	// Salida: El área del tren es: 91.84955592153875
+	fmt.Println(proyecto.Tamanio())
+	// Salida: 532992
 }

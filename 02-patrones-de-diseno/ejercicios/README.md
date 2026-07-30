@@ -1,5 +1,10 @@
 # Ejercicios: Patrones de Diseño
 
+Los ejercicios cubren los tres patrones vistos en el apunte: **Composite**,
+**Adapter** e **Iterator**. Los ejemplos de referencia están en `../ejemplos/`.
+
+---
+
 1. **Sistema de Figuras.** Implementar una jerarquía de figuras geométricas
    usando el patrón *Composite* para que un `Dibujo` pueda estar compuesto
    tanto por figuras simples como por otros dibujos. Cada figura debe
@@ -12,27 +17,8 @@
    incompatibles; el adapter debe unificarlas.
    → `02-notificador/`
 
-3. **Iterador de Listas.** Implementar un iterador externo para una lista
-   simplemente enlazada usando el patrón *Iterator*. Debe permitir
-   recorrer la lista sin exponer su estructura interna.
-   → `03-iterador-listas/`
-
-4. **Decorator para Logging.** Implementar el patrón *Decorator* para un
-   sistema de logging componible. Un logger simple puede ser envuelto
-   con decoradores que agregan timestamp, nivel (INFO/WARN/ERROR)
-   o convierten a mayúsculas, de forma anidada.
-   → `04-decorator-logger/`
-
-5. **Factory Method para Figuras.** Implementar una fábrica que cree
-   figuras geométricas (círculo, rectángulo, cuadrado) a partir de
-   descripciones textuales como `"circulo 5"`, devolviendo error si
-   el formato no es reconocido.
-   → `05-factory-figuras/`
-
-6. **Command con Undo/Redo.** Implementar el patrón *Command* para un
-   mini editor de texto con soporte de deshacer y rehacer. Los comandos
-   `Insertar` y `Borrar` implementan una interfaz común y un `Historial`
-   administra las pilas de undo/redo.
-   → `06-command-undo/`
-
-Los ejemplos de referencia están en el directorio `../ejemplos/`.
+3. **Iterador de Lista Doble.** Implementar un iterador externo para una
+   lista doblemente enlazada usando el patrón *Iterator*. La interfaz del
+   iterador tiene dos métodos: `Siguiente()` (avanza hacia adelante) y
+   `Anterior()` (retrocede). El patrón de uso es `for it.Siguiente() { ... }`.
+   → `03-iterador-lista-doble/`

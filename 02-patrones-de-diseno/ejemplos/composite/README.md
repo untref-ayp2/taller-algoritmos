@@ -1,10 +1,10 @@
-# Composite — Tren de Figuras
+# Composite — Sistema de Archivos
 
-Ejemplo del patrón *Composite*. `Rectangulo`, `Circulo` y `Triangulo`
-son figuras simples que implementan la interfaz `Figura`. `Grupo` es
-un compuesto que puede contener tanto figuras simples como otros
-grupos. Se construye un tren con locomotora y vagones, y se calcula
-su área total.
+Ejemplo del patrón *Composite*. `Archivo` es un elemento simple (hoja) que
+reporta su tamaño en bytes. `Carpeta` es un compuesto que contiene otros
+`Componente` (archivos o carpetas) y calcula su tamaño total sumando
+recursivamente. Se construye un directorio de proyecto con archivos y
+subcarpetas, y se calcula su tamaño total.
 
 ```bash
 go run main.go

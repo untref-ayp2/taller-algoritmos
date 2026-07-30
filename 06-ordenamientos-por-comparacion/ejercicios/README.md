@@ -1,4 +1,4 @@
-# Ejercicios: Ordenamientos Recursivos
+# Ejercicios: Ordenamientos por Comparación de Claves
 
 ---
 
@@ -111,3 +111,44 @@ simultáneamente insertando el menor elemento en cada paso.
 - ¿Es estable?
 
 → `06-fusionar-ordenados/`
+
+---
+
+## 7. Contar Inversiones
+
+Implementar una función que cuente la cantidad de pares `(i, j)` con `i < j`
+y `arr[i] > arr[j]` en un arreglo de enteros. Debe hacerlo en tiempo
+$O(n \log n)$ usando una modificación del algoritmo MergeSort.
+
+**Preguntas:**
+- ¿Qué complejidad temporal tiene?
+- ¿Cómo se compara con un enfoque ingenuo de $O(n^2)$?
+
+→ `07-contar-inversiones/`
+
+---
+
+## 8. Top-K Elementos Más Frecuentes
+
+Dado un slice de enteros y un entero `k`, devolver los `k` elementos que más
+se repiten, ordenados por frecuencia descendente. Usar un mapa de frecuencias
+y ordenamiento parcial.
+
+**Preguntas:**
+- ¿Qué complejidad temporal tiene?
+- ¿Se puede hacer sin ordenar todos los elementos?
+
+→ `08-k-frecuente/`
+
+---
+
+## 9. MergeSort sobre Lista Enlazada
+
+Implementar MergeSort in-place sobre una lista enlazada simple de enteros.
+La función recibe la cabeza de la lista y devuelve la nueva cabeza ordenada.
+
+**Preguntas:**
+- ¿Por qué MergeSort es preferible a QuickSort en listas enlazadas?
+- ¿Qué complejidad espacial tiene esta implementación?
+
+→ `09-ordenar-lista/`

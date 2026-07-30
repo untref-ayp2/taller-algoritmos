@@ -81,7 +81,7 @@ No necesitás hacer nada especial — el PR se actualiza solo.
 03-algoritmos-avidos/         # capítulo 4-3
 04-backtracking/              # capítulo 4-4
 05-programacion-dinamica/     # capítulo 4-5
-06-ordenamientos-recursivos/  # capítulo 4-6
+06-ordenamientos-por-comparacion/  # capítulo 4-6
 07-ordenamientos-lineales/     # capítulo 4-7
 ```
 

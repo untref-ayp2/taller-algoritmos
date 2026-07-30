@@ -28,3 +28,17 @@
    es `p = 2`. Implementar un algoritmo de división y conquista de orden
    `O(log n)` que encuentre la posición `p` del pico.
    → `05-pico/`
+
+6. **MCD (Máximo Común Divisor).** Dados dos enteros no negativos `a` y `b`,
+   calcular su máximo común divisor utilizando el algoritmo de Euclides de
+   forma recursiva.
+   → `06-mcd/`
+
+7. **Potencia.** Dados `base` (real) y `exp` (entero, puede ser negativo),
+   calcular `base^exp` mediante exponenciación binaria recursiva.
+   → `07-potencia/`
+
+8. **Raíz Digital.** Dado un entero no negativo, calcular su raíz digital:
+   sumar sus dígitos y repetir el proceso hasta obtener un solo dígito.
+   Por ejemplo, `raizDigital(987) → 9+8+7=24 → 2+4=6`.
+   → `08-raiz-digital/`
