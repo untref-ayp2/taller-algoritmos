@@ -54,11 +54,11 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 | Directorio | Descripción |
 |---|---|
 | `ejercicios/01-sesion/` | Seleccionar máxima cantidad de sesiones sin superponer |
-| `ejercicios/02-codigo-huffman/` | Comprimir texto con código Huffman |
-| `ejercicios/03-maquina-expendedora/` | Cambio con la menor cantidad de monedas (versión ávida) |
-| `ejercicios/04-mochila-fraccionaria/` | Maximizar valor en mochila con ítems fraccionables |
-| `ejercicios/05-minimizar-espera/` | Minimizar tiempo total de espera (Shortest Job First) |
-| `ejercicios/06-planificar-tareas/` | Maximizar ganancia con tareas con deadline |
+| `ejercicios/02-maquina-expendedora/` | Cambio con la menor cantidad de monedas (versión ávida) |
+| `ejercicios/03-mochila-fraccionaria/` | Maximizar valor en mochila con ítems fraccionables |
+| `ejercicios/04-minimizar-espera/` | Minimizar tiempo total de espera (Shortest Job First) |
+| `ejercicios/05-planificar-tareas/` | Maximizar ganancia con tareas con deadline |
+| `ejercicios/06-codigo-huffman/` | Comprimir texto con código Huffman |
 
 ### 04 — Backtracking (capítulo 4-4)
 
