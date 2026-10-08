@@ -34,8 +34,8 @@ Como el total de bits del texto comprimido es
 `Σ (frecuencia × longitud del código)`, achicarle bits a los que más
 aparecen es donde está el ahorro. Ejemplo: en `"aaabbc"` la `a` aparece 4
 veces, la `b` 2 y la `c` 1. Sin comprimir: 7 caracteres × 8 bits = 56
-bits. Si a `a` le damos el código `0`, a `b` el `10` y a `c` el `11`,
-el texto comprimido queda `0 0 0 0 10 10 11` = **10 bits**. Una locura de
+bits. Si a `a` le damos el código `1`, a `b` el `01` y a `c` el `00`,
+el texto comprimido queda `1 1 1 1 01 01 00` = **10 bits**. Una locura de
 ahorro; después vemos cómo llegar a esa asignación de códigos.
 
 **La trampa: poder descomprimir sin ambigüedad.** Comprimir no sirve de
@@ -122,7 +122,8 @@ cada paso y buscando los dos de menor frecuencia.
 1. Crear una hoja por cada carácter con su frecuencia.
 2. Mientras haya más de un nodo: tomar los dos de **menor frecuencia**,
    crear un nodo nuevo con frecuencia igual a la suma de ambos y con esos
-   dos como hijos, y devolver el nodo nuevo al conjunto.
+   dos como hijos (el de menor frecuencia, a la **izquierda**, con bit
+   `'0'`), y devolver el nodo nuevo al conjunto.
 3. El único nodo que queda es la raíz del árbol.
 4. `Codigos()`: recorrer el árbol desde la raíz; al llegar a una hoja,
    registrar `Car` → el prefijo acumulado (`0` a la izquierda, `1` a la
@@ -154,21 +155,21 @@ Frecuencias: `a:4, b:2, c:1` (7 en total).
 |------|--------------|------------|--------------------|
 | —    | —            | hojas      | a(4) b(2) c(1)    |
 | 1    | c(1) + b(2)  | n(3)       | a(4) n(3)         |
-| 2    | a(4) + n(3)  | raíz(7)    | queda la raíz     |
+| 2    | n(3) + a(4)  | raíz(7)    | queda la raíz     |
 
 ```
         (7)
        /    \
-    a(4)    (3)
-           /   \
-        b(2)   c(1)
+     (3)    a(4)
+    /   \
+  c(1)  b(2)
 ```
 
-Códigos: `a → 0` (1 bit), `b → 10` (2 bits), `c → 11` (2 bits). Son
+Códigos: `a → 1` (1 bit), `b → 01` (2 bits), `c → 00` (2 bits). Son
 prefijo-libres: ninguno está dentro de otro.
 
 - Sin comprimir: 7 caracteres × 8 bits = **56 bits**.
-- Comprimido: `0 0 0 0 10 10 11` = 4×1 + 2×2 + 1×2 = **10 bits**.
+- Comprimido: `1 1 1 1 01 01 00` = 4×1 + 2×2 + 1×2 = **10 bits**.
 
 ### Ejemplo del test: frecuencias `a:5, b:9, c:12, d:13, e:16, f:45`
 

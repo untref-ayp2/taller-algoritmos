@@ -12,7 +12,7 @@ type ArbolHuffman struct {
 }
 
 func Construir(frecuencias map[rune]int) *ArbolHuffman {
-	// TODO: implementar usando cola de prioridad
+	// TODO: implementar (en cada paso, buscar los dos de menor frecuencia)
 	return nil
 }
 
