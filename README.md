@@ -81,6 +81,13 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 
 ### 05 — Programación Dinámica (capítulo 4-5)
 
+**Ejemplos:**
+
+| Directorio | Descripción |
+|---|---|
+| `ejemplos/fibonacci/` | Fibonacci con tabulación y memoización |
+| `ejemplos/mochila/` | Mochila 0/1 con tabulación y memoización |
+
 **Ejercicios:**
 
 | Directorio | Descripción |
