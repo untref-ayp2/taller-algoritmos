@@ -62,6 +62,12 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 
 ### 04 — Backtracking (capítulo 4-4)
 
+**Ejemplos:**
+
+| Directorio | Descripción |
+|---|---|
+| `ejemplos/nreinas/` | Problema de las N reinas con backtracking |
+
 **Ejercicios:**
 
 | Directorio | Descripción |
