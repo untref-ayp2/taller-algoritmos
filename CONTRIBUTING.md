@@ -85,8 +85,8 @@ No necesitás hacer nada especial — el PR se actualiza solo.
 07-ordenamientos-lineales/     # capítulo 4-7
 ```
 
-Cada capítulo tiene `ejercicios/` (esqueletos con tests) y algunos pueden 
-tener también `ejemplos/` (código funcional).
+Cada capítulo tiene `ejercicios/` (esqueletos con tests). Los ejemplos
+funcionales viven en el repositorio `untref-ayp2/examples`.
 
 ## Comandos útiles
 
@@ -94,8 +94,6 @@ tener también `ejemplos/` (código funcional).
     make lint   # verificar estilo con linter
     make build  # compilar todo sin ejecutar
     make clean  # limpiar archivos generados
-
-    go run ./01-recursividad/ejemplos/factorial  # ejecutar un ejemplo
 
 ## Requisitos
 

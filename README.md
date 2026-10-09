@@ -4,17 +4,11 @@ Repositorio complementario de la sección **Diseño de Algoritmos** de los apunt
 
 ## Estructura
 
-Cada capítulo tiene ejercicios (esqueletos con tests) y algunos incluyen además ejemplos funcionales.
+Cada capítulo tiene ejercicios (esqueletos con tests). Los ejemplos funcionales
+(con animación en la terminal, como los de backtracking) viven en el repositorio
+[untref-ayp2/examples](https://github.com/untref-ayp2/examples).
 
 ### 01 — Recursividad y División y Conquista (capítulo 4-1)
-
-**Ejemplos:**
-
-| Directorio | Descripción |
-|---|---|
-| `ejemplos/factorial/` | Cálculo recursivo del factorial de un número |
-| `ejemplos/par-impar/` | Recursión indirecta: `esPar` y `esImpar` se llaman mutuamente |
-| `ejemplos/busqueda-binaria/` | Búsqueda binaria recursiva (división y conquista) |
 
 **Ejercicios:**
 
@@ -30,14 +24,6 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y algunos incluyen ademá
 | `ejercicios/08-raiz-digital/` | Raíz digital: suma de dígitos hasta un solo dígito |
 
 ### 02 — Patrones de Diseño (capítulo 4-2)
-
-**Ejemplos:**
-
-| Directorio | Descripción |
-|---|---|
-| `ejemplos/adapter/` | Adapter: Robot que mide en cm → cliente espera pulgadas |
-| `ejemplos/composite/` | Composite: sistema de archivos con `Archivo` y `Carpeta` |
-| `ejemplos/iterator/` | Iterator con API de 2 métodos (`Siguiente` / `Valor`) |
 
 **Ejercicios:**
 
@@ -62,14 +48,6 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y algunos incluyen ademá
 
 ### 04 — Backtracking (capítulo 4-4)
 
-**Ejemplos:**
-
-| Directorio | Descripción |
-|---|---|
-| `ejemplos/nreinas/` | Problema de las N reinas con backtracking |
-| `ejemplos/ratmaze/` | Laberinto (*rat in a maze*): camino desde el origen hasta el destino |
-| `ejemplos/sudoku/` | Resolución de Sudoku 9 × 9 con animación en la terminal |
-
 **Ejercicios:**
 
 | Directorio | Descripción |
@@ -82,13 +60,6 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y algunos incluyen ademá
 | `ejercicios/06-particion-igual/` | Dividir arreglo en dos subconjuntos de igual suma |
 
 ### 05 — Programación Dinámica (capítulo 4-5)
-
-**Ejemplos:**
-
-| Directorio | Descripción |
-|---|---|
-| `ejemplos/fibonacci/` | Fibonacci con tabulación y memoización |
-| `ejemplos/mochila/` | Mochila 0/1 con tabulación y memoización |
 
 **Ejercicios:**
 
@@ -148,16 +119,6 @@ go test -v ./01-recursividad/ejercicios/01-palindromo/...
 
 # Compilar todo
 make build
-```
-
-Para ejecutar un ejemplo:
-
-```bash
-go run ./01-recursividad/ejemplos/factorial
-go run ./02-patrones-de-diseno/ejemplos/adapter
-go run ./04-backtracking/ejemplos/nreinas
-go run ./04-backtracking/ejemplos/ratmaze
-go run ./04-backtracking/ejemplos/sudoku
 ```
 
 Para más información, ver [CONTRIBUTING.md](CONTRIBUTING.md).

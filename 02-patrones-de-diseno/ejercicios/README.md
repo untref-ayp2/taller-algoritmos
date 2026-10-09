@@ -1,7 +1,8 @@
 # Ejercicios: Patrones de Diseño
 
 Los ejercicios cubren los tres patrones vistos en el apunte: **Composite**,
-**Adapter** e **Iterator**. Los ejemplos de referencia están en `../ejemplos/`.
+**Adapter** e **Iterator**. Los ejemplos de referencia están en el repositorio
+[untref-ayp2/examples](https://github.com/untref-ayp2/examples).
 
 ---
 
