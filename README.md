@@ -4,7 +4,7 @@ Repositorio complementario de la sección **Diseño de Algoritmos** de los apunt
 
 ## Estructura
 
-Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos también incluyen ejemplos funcionales.
+Cada capítulo tiene ejercicios (esqueletos con tests) y algunos incluyen además ejemplos funcionales.
 
 ### 01 — Recursividad y División y Conquista (capítulo 4-1)
 
@@ -67,6 +67,8 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 | Directorio | Descripción |
 |---|---|
 | `ejemplos/nreinas/` | Problema de las N reinas con backtracking |
+| `ejemplos/ratmaze/` | Laberinto (*rat in a maze*): camino desde el origen hasta el destino |
+| `ejemplos/sudoku/` | Resolución de Sudoku 9 × 9 con animación en la terminal |
 
 **Ejercicios:**
 
@@ -153,6 +155,9 @@ Para ejecutar un ejemplo:
 ```bash
 go run ./01-recursividad/ejemplos/factorial
 go run ./02-patrones-de-diseno/ejemplos/adapter
+go run ./04-backtracking/ejemplos/nreinas
+go run ./04-backtracking/ejemplos/ratmaze
+go run ./04-backtracking/ejemplos/sudoku
 ```
 
 Para más información, ver [CONTRIBUTING.md](CONTRIBUTING.md).
