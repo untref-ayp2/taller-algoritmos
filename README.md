@@ -4,17 +4,11 @@ Repositorio complementario de la sección **Diseño de Algoritmos** de los apunt
 
 ## Estructura
 
-Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos también incluyen ejemplos funcionales.
+Cada capítulo tiene ejercicios (esqueletos con tests). Los ejemplos funcionales
+(con animación en la terminal, como los de backtracking) viven en el repositorio
+[untref-ayp2/examples](https://github.com/untref-ayp2/examples).
 
 ### 01 — Recursividad y División y Conquista (capítulo 4-1)
-
-**Ejemplos:**
-
-| Directorio | Descripción |
-|---|---|
-| `ejemplos/factorial/` | Cálculo recursivo del factorial de un número |
-| `ejemplos/par-impar/` | Recursión indirecta: `esPar` y `esImpar` se llaman mutuamente |
-| `ejemplos/busqueda-binaria/` | Búsqueda binaria recursiva (división y conquista) |
 
 **Ejercicios:**
 
@@ -30,14 +24,6 @@ Cada capítulo tiene ejercicios (esqueletos con tests) y los primeros dos tambi�
 | `ejercicios/08-raiz-digital/` | Raíz digital: suma de dígitos hasta un solo dígito |
 
 ### 02 — Patrones de Diseño (capítulo 4-2)
-
-**Ejemplos:**
-
-| Directorio | Descripción |
-|---|---|
-| `ejemplos/adapter/` | Adapter: Robot que mide en cm → cliente espera pulgadas |
-| `ejemplos/composite/` | Composite: sistema de archivos con `Archivo` y `Carpeta` |
-| `ejemplos/iterator/` | Iterator con API de 2 métodos (`Siguiente` / `Valor`) |
 
 **Ejercicios:**
 
@@ -133,13 +119,6 @@ go test -v ./01-recursividad/ejercicios/01-palindromo/...
 
 # Compilar todo
 make build
-```
-
-Para ejecutar un ejemplo:
-
-```bash
-go run ./01-recursividad/ejemplos/factorial
-go run ./02-patrones-de-diseno/ejemplos/adapter
 ```
 
 Para más información, ver [CONTRIBUTING.md](CONTRIBUTING.md).
