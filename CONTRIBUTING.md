@@ -98,5 +98,5 @@ funcionales viven en el repositorio `untref-ayp2/examples`.
 ## Requisitos
 
 - Go 1.22 o superior.
-- Opcional: golangci-lint (https://golangci-lint.run/) para verificar estilo
+- Opcional: golangci-lint v2 (https://golangci-lint.run/) para verificar estilo
   localmente.
