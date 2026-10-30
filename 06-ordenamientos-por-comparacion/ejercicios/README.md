@@ -27,11 +27,11 @@ La función `MergeSort[T any](s []T, less func(a, b T) bool)` ordena el slice re
 Implementar el algoritmo **QuickSort** sobre un slice `[]T` usando una función de comparación `less`.
 
 La función `QuickSort[T any](s []T, less func(a, b T) bool)` ordena el slice recibido
-seleccionando un pivote (último elemento), particionando y ordenando recursivamente cada subslice, sin crear uno nuevo.
+seleccionando un pivote (elemento del medio), particionando y ordenando recursivamente cada subslice, sin crear uno nuevo.
 
 **Requisitos:**
-- Usar el último elemento como pivote
-- Particionar in-place
+- Elegir el elemento del medio como pivote
+- Particionar in-place (partición de 2 vías)
 - Funcionar con cualquier tipo `T`
 
 **Preguntas:**

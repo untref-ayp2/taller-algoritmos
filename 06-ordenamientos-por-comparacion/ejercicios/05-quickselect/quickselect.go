@@ -7,6 +7,6 @@ func QuickSelect[T any](s []T, k int, less func(a, b T) bool) T {
 }
 
 func partition[T any](s []T, lo, hi int, less func(a, b T) bool) int {
-	// TODO: particionar s[lo:hi+1] usando s[hi] como pivote
+	// TODO: particionar s[lo:hi+1] eligiendo el elemento del medio como pivote (partición de 2 vías)
 	return 0
 }

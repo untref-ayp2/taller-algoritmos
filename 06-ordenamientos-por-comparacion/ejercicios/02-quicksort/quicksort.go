@@ -6,6 +6,6 @@ func QuickSort[T any](s []T, less func(a, b T) bool) {
 }
 
 func partition[T any](s []T, less func(a, b T) bool) int {
-	// TODO: particionar usando el último elemento como pivote
+	// TODO: particionar eligiendo el elemento del medio como pivote (partición de 2 vías)
 	return 0
 }
