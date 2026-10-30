@@ -25,3 +25,18 @@
    la longitud de la subsecuencia común más larga. Implementar con PD
    usando una tabla `(m+1) × (n+1)`.
    → `03-subsecuencia/`
+
+4. **Coeficiente Binomial.** Calcular C(n, k) con programación
+   dinámica (tabulación), construyendo el triángulo de Pascal fila
+   por fila.
+   → `04-coeficiente-binomial/`
+
+5. **Corte de Varilla.** Dada una varilla de longitud `n` y una lista
+   de precios por longitud, maximizar la ganancia al cortarla
+   (Rod Cutting).
+   → `05-varilla/`
+
+6. **Camino de Costo Mínimo.** Dada una grilla con costos por celda,
+   encontrar el camino de costo mínimo de `(0,0)` a la esquina
+   inferior derecha y reconstruir la ruta.
+   → `06-grilla/`

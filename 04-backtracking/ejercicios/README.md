@@ -16,3 +16,15 @@
    posición `(0,0)` hasta `(N-1, N-1)` usando backtracking.
    Solo se permite moverse hacia abajo y hacia la derecha.
    → `03-laberinto/`
+
+4. **Generar Paréntesis.** Dado un número `n`, generar todas las
+   secuencias de `n` pares de paréntesis balanceados válidas.
+   → `04-parentesis/`
+
+5. **Sudoku.** Dado un tablero 9×9 con celdas vacías (0), completarlo
+   con backtracking y poda respetando las reglas del sudoku.
+   → `05-sudoku/`
+
+6. **Partición Igual.** Dividir un arreglo en dos subconjuntos
+   disjuntos con la misma suma, o determinar que no es posible.
+   → `06-particion-igual/`

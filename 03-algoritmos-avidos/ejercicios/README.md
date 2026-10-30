@@ -5,30 +5,30 @@
    superpongan. Implementar el algoritmo ávido visto en clase.
    → `01-sesion/`
 
-2. **Código Huffman.** Implementar el algoritmo de Huffman para comprimir
-   una cadena de texto. Dado un texto, construir el árbol de Huffman,
-   generar los códigos binarios para cada caracter y devolver la cadena
-   comprimida.
-   → `02-codigo-huffman/`
-
-3. **Máquina Expendedora.** Implementar un algoritmo que, dado un monto
+2. **Máquina Expendedora.** Implementar un algoritmo que, dado un monto
    a devolver y un conjunto de denominaciones de monedas, devuelva el
    cambio usando la menor cantidad de monedas posible (versión ávida,
    asumiendo denominaciones canónicas).
-   → `03-maquina-expendedora/`
+   → `02-maquina-expendedora/`
 
-4. **Mochila Fraccionaria.** Implementar el algoritmo ávido para la
+3. **Mochila Fraccionaria.** Implementar el algoritmo ávido para la
    mochila fraccionaria: ordenar items por valor/peso descendente y
    tomar fracciones del último si es necesario para llenar la capacidad.
-   → `04-mochila-fraccionaria/`
+   → `03-mochila-fraccionaria/`
 
-5. **Minimizar Tiempo de Espera.** Dado un conjunto de trabajos con
+4. **Minimizar Tiempo de Espera.** Dado un conjunto de trabajos con
    tiempos de procesamiento, determinar el orden que minimiza la suma
    de tiempos de espera usando Shortest Job First (SJF).
-   → `05-minimizar-espera/`
+   → `04-minimizar-espera/`
 
-6. **Planificación de Tareas con Plazos.** Dados trabajos con deadline
+5. **Planificación de Tareas con Plazos.** Dados trabajos con deadline
    y ganancia, maximizar la ganancia total seleccionando y ordenando
    trabajos de forma ávida (ordenar por ganancia, asignar al slot más
    tardío disponible).
-   → `06-planificar-tareas/`
+   → `05-planificar-tareas/`
+
+6. **Código Huffman.** Implementar el algoritmo de Huffman para comprimir
+   una cadena de texto. Dado un texto, construir el árbol de Huffman,
+   generar los códigos binarios para cada caracter y devolver la cadena
+   comprimida.
+   → `06-codigo-huffman/`
