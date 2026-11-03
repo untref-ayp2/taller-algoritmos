@@ -1,7 +1,8 @@
 package mergesort
 
 func MergeSort[T any](s []T, less func(a, b T) bool) {
-	// TODO: implementar MergeSort
+	// TODO: implementar MergeSort adaptando la versión de ../ejemplos/mergesort/
+	// (que usa cmp) para que use less.
 	// Debe ordenar el slice recibido sin crear uno nuevo.
 }
 

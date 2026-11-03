@@ -74,19 +74,22 @@ Cada capítulo tiene ejercicios (esqueletos con tests). Los ejemplos funcionales
 
 ### 06 — Ordenamientos por Comparación de Claves (capítulo 4-6)
 
+**Ejemplos:** en `06-ordenamientos-por-comparacion/ejemplos/` (MergeSort,
+QuickSort y HeapSort genéricos con `cmp`, más ordenamiento de personas por
+edad, DNI y apellido).
+
 **Ejercicios:**
 
 | Directorio | Descripción |
 |---|---|
-| `ejercicios/01-mergesort/` | MergeSort genérico con función de comparación |
-| `ejercicios/02-quicksort/` | QuickSort genérico con función de comparación |
-| `ejercicios/03-heapsort/` | HeapSort genérico con función de comparación |
-| `ejercicios/04-ordenar-estructuras/` | Ordenar struct `Persona` por múltiples criterios |
-| `ejercicios/05-quickselect/` | k-ésimo elemento más pequeño (QuickSelect) |
-| `ejercicios/06-fusionar-ordenados/` | Fusionar dos slices ordenados |
-| `ejercicios/07-contar-inversiones/` | Contar inversiones con MergeSort modificado |
-| `ejercicios/08-k-frecuente/` | Top-K elementos más frecuentes |
-| `ejercicios/09-ordenar-lista/` | MergeSort in-place sobre lista enlazada simple |
+| `ejercicios/01-mergesort/` | MergeSort genérico con `less` (adaptar desde `cmp`) |
+| `ejercicios/02-quicksort/` | QuickSort genérico con `less` (adaptar desde `cmp`) |
+| `ejercicios/03-heapsort/` | HeapSort genérico con `less` (adaptar desde `cmp`) |
+| `ejercicios/04-quickselect/` | k-ésimo elemento más pequeño (QuickSelect) |
+| `ejercicios/05-fusionar-ordenados/` | Fusionar dos slices ordenados |
+| `ejercicios/06-contar-inversiones/` | Contar inversiones con MergeSort modificado |
+| `ejercicios/07-k-frecuente/` | Top-K elementos más frecuentes |
+| `ejercicios/08-ordenar-lista/` | MergeSort in-place sobre lista enlazada simple |
 
 ### 07 — Ordenamientos Lineales (capítulo 4-7)
 
